@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ptt-cli"
+version = "0.1.0"
+dependencies = [
+    "requests",
+]
+
+[project.scripts]
+ptt-cli = "pttcli.cli:cli"
+
+[tool.pylint.MAIN]
+fail-under=9
+
+[tool.pylint.FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=120
+
+[tool.pylint.BASIC]
+good-names="i"
+
+[tool.pylint.REPORTS]
+output-format="colorized"
+
+# Python expression which should return a score less than 10 (10 is the highest score). You have access to the variables
+# errors warning, statement which respectively contain the number of errors / warnings messages and the total number
+# of statements analyzed. This is used by the global evaluation report (RP0004).
+# Default: 10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+#
+# we increased the value of a error in order to considerably lower the score
+evaluation="10.0 - ((float(100 * error + warning + refactor + convention) / statement) * 10)"
