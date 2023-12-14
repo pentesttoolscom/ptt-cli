@@ -1,1 +1,3 @@
 __pycache__
+dist/
+src/ptt_cli.egg-info/
