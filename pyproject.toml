@@ -3,11 +3,16 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ptt-cli"
-version = "0.1.0"
+name = "pentesttools"
+version = "0.0.2"
+description = "Pentest-Tools.com Vulnerability Scanners Library"
+authors = [
+    {name = "The Pentest-Tools Team", email = "contact@pentest-tools.com"}
+]
 dependencies = [
     "requests",
 ]
+requires-python = ">=3.9"
 
 [project.scripts]
 ptt-cli = "pttcli.cli:cli"
